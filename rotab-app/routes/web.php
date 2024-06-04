@@ -10,10 +10,14 @@ Route::get('About', function() {
     echo "About This Application";
 });
 
-Route::get('EmployeeMainInfo', function(){
-    return view('EmployeeMainInfo');
+Route::get('Employee_Main_Info', function(){
+    return view('Employee_Main_Info');
 });
 
-Route::post('EmployeeMainInfo', function(){
+Route::post('Employee_Main_Info', function(){
     echo "Done!!";
+});
+
+Route::get('Employee_Passport_Info', function(){
+    return view('Employee_Passport_Info');
 });
