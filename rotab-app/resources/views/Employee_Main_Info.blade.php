@@ -4,89 +4,89 @@
 
         <form action="" method="post">
 {{csrf_field()}}
-            <h3>Name In Arabic</h3>
+            <h4>Name In Arabic</h4>
             <div class="form-row mb-4">
-                <div class="col">
-                    <label>First Name In Arabic</label>
-                    <input type="text" class="form-control" name="first_name_in_arabic" placeholder="First Name in Arabic">
+                <div class="col-md">
+                    <label>First Name <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="first_name_in_arabic" placeholder="First Name in Arabic" required>
                 </div>
-                <div class="col">
-                    <label>Father Name In Arabic</label>
+                <div class="col-md">
+                    <label>Father Name</label>
                     <input type="text" class="form-control" name="father_name_in_arabic" placeholder="Father Name In Arabic">
                 </div>
-                <div class="col">
-                    <label>Grandfather Name In Arabic</label>
+                <div class="col-md">
+                    <label>Grandfather Name</label>
                     <input type="text" class="form-control" name="grandfather_name_in_arabic" placeholder="Grandfather Name In Arabic">
                 </div>
-                <div class="col">
-                    <label>Family Name in Arabic</label>
-                    <input type="text" class="form-control" name="surename_in_arabic" placeholder="Surename in Arabic">
+                <div class="col-md">
+                    <label>Surename <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="surename_in_arabic" placeholder="Surename in Arabic" required>
                 </div>
                 </div>
 
                 <hr>
 
-            <h3>Name In English</h3>
+            <h4>Name In English</h4>
             <div class="form-row mb-4">
-                <div class="col">
-                    <label for="html">First Name in English</label>
-                    <input type="text" class="form-control" name="first_name_in_english" placeholder="First Name in English">
+                <div class="col-md">
+                    <label for="html">First Name <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="first_name_in_english" placeholder="First Name in English" required>
                 </div>
-                <div class="col">
-                    <label>Father Name in English</label>
+                <div class="col-md">
+                    <label>Father Name <span style="color: red;">*</span></label>
                     <input type="text" class="form-control" name="father_name_in_english" placeholder="Father Name In English">
                 </div>
-                <div class="col">
-                    <label>Grandfather Name in English</label>
+                <div class="col-md">
+                    <label>Grandfather Name</label>
                     <input type="text" class="form-control" name="grandfather_name_in_english" placeholder="Grandfather Name In English">
                 </div>
-                <div class="col">
-                    <label>Family Name in English</label>
-                    <input type="text" class="form-control" name="surename_in_english" placeholder="Surename in English">
+                <div class="col-md">
+                    <label>Surename <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="surename_in_english" placeholder="Surename in English" required>
                 </div>
             </div>
             <hr>
-            <h3>Identity Information</h3>
+            <h4>Identity Information</h4>
             <div class="form-row mb-4">
-                <div class="col">
-                    <label for="html">National ID/Iqama ID</label>
-                    <input type="text" class="form-control" name="id_iqama_number" placeholder="Number ID">
+                <div class="col-md">
+                    <label>National ID/Iqama ID <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="id_iqama_number" placeholder="Number ID" required>
                 </div>
-                <div class="col">
-                    <label>Issue Place</label>
-                    <input type="text" class="form-control" name="issue_place" placeholder="Issue Place">
+                <div class="col-md">
+                    <label>Issue Place <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="issue_place" placeholder="Issue Place" required>
                 </div>
-                <div class="col">
-                    <label>Expiry Date</label>
-                    <input type="date" class="form-control" name="expiry_date">
+                <div class="col-md">
+                    <label>Expiry Date <span style="color: red;">*</span></label>
+                    <input type="date" class="form-control" name="expiry_date" required>
                 </div>
-                <div class="col">
-                    <label>Occupation in Arabic</label>
-                    <input type="text" class="form-control" name="occupation_in_id_ar" placeholder="Occupation in ID Arabic">
+                <div class="col-md" >
+                    <label>Occupation in Arabic <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="occupation_in_id_ar" placeholder="Occupation in ID Arabic" required>
                 </div>
 
-                <div class="col">
-                    <label>Occupation in English</label>
-                    <input type="text" class="form-control" name="occupation_in_id_en" placeholder="Occupation in ID English">
+                <div class="col-md">
+                    <label>Occupation in English <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="occupation_in_id_en" placeholder="Occupation in ID English" required>
                 </div>
             </div>
             <hr>
-            <h3>Nationality Info</h3>
+            <h4>Nationality Info</h4>
             <div class="form-row mb-4">
-                <div class="col">
-                    <label for="html">Nationlity</label>
-                    <input type="text" class="form-control" name="employee_nationality" placeholder="Nationality">
+                <div class="col-md">
+                    <label for="html">Nationlity <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="employee_nationality" placeholder="Nationality" required>
                 </div>
-                <div class="col">
-                    <label>Religion</label>
-                    <input type="text" class="form-control" name="religion" placeholder="Religion">
+                <div class="col-md">
+                    <label>Religion <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="religion" placeholder="Religion" required>
                 </div>
-                <div class="col">
-                    <label>Sponsorship</label>
-                    <input type="text" class="form-control" name="sponsorship" placeholder="GOSI or Sponsorship">
+                <div class="col-md">
+                    <label>Sponsorship <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="sponsorship" placeholder="GOSI or Sponsorship" required>
                 </div>
-                <div class="col">
-                    <label>Relationship Status</label>
+                <div class="col-md">
+                    <label>Relationship Status <span style="color: red;">*</span></label>
                     <select name="relationship_status" class="form-control">
                         <option value="celibate">Celibate</option>
                         <option value="divorced">Divorced</option>
@@ -97,14 +97,14 @@
 
             </div>
 
-            <h3>Job ID</h3>
+            <h4>Job ID and Hire Date</h4>
             <div class="form-row mb-4">
-                <div class="col">
-                    <label>Job ID and Hire Date</label>
+                <div class="col-md">
+                    <label>Job ID <span style="color: red;">*</span></label>
                     <input type="text" class="form-control" name="employee_job_id" placeholder="Job ID">
                 </div>
-                <div class="col">
-                    <label>Hire Date</label>
+                <div class="col-md">
+                    <label>Hire Date <span style="color: red;">*</span></label>
                     <input type="date" class="form-control" name="hire_date">
                 </div>
             </div>

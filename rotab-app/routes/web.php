@@ -10,9 +10,7 @@ Route::get('About', function() {
     echo "About This Application";
 });
 
-Route::get('Employee_Main_Info', function(){
-    return view('Employee_Main_Info');
-});
+Route::get('Employee_Main_Info', ['\app\Http\Controller\Employee_Main_Info::class', 'create']);
 
 Route::post('Employee_Main_Info', function(){
     echo "Done!!";
