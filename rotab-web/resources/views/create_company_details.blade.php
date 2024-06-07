@@ -21,6 +21,12 @@
             <input type="text" class="form-control" name="unified_no" placeholder="7012XXXXX" required>
             <small class="form-text form-muted">{{__('computer ID')}}</small>
         </div>
+
+        <div class="col-md">
+            <label>{{__('VAT No.')}}</label>
+            <input type="text" class="form-control" name="vat_no" placeholder="3101XXXXXXXXXX">
+            <small class="form-text form-muted">{{__('Enter VAT if exist')}}</small>
+        </div>
     </div>
 
         <div class="form-row mb-4">
@@ -103,13 +109,46 @@
                 <input type="text" class="form-control" name="twelfth_manager_in_cr">
             </div>
         </div>
-        </div>
         <hr>
         <h4>{{__('National Address')}}</h4>
         <div class="form-row mb-4">
             <div class="col-md">
-                <label>{{__('address')}}</label>
+                <label>{{__('Short Address')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_short_address" placeholder="KJB6971" required>
+            </div>
+            <div class="col-md">
+                <label>{{__('Building No.')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_building_no" placeholder="2342" required>
+            </div>
+            <div class="col-md">
+                <label>{{__('Street Name')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_street_name" placeholder="King Abdullah St." required>
+            </div>
+            <div class="col-md">
+                <label>{{__('Secondary No.')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_secondary_no" placeholder="3212" required>
+            </div>
+            <div class="col-md">
+                <label>{{__('District')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_district_name" placeholder="Almanar Dist." required>
             </div>
         </div>
+        <div class="form-row mb-4">
+            <div class="col-md">
+                <label>{{__('Postal Code')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_postal_code_no" placeholder="21121" required>
+            </div>
+            <div class="col-md">
+                <label>{{__('City')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" name="company_city_name" placeholder="Jeddah" required>
+            </div>
+            <div class="col-md">
+                <label>{{__('Zip No.')}}</label>
+                <input type="text" class="form-control" name="company_zip_no" placeholder="43211">
+                <small class="form-text form-muted">{{__('Enter zip number if exist')}}</small>
+            </div>
+        </div>
+
+            <button name="submit" type="submit" class="btn btn-primary">submit</button>
     </form>
 </div>
