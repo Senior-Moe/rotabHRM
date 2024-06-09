@@ -50,12 +50,6 @@
                     <option value="here_id_foreach">company-id - company name</option>
                 </select>
             </div>
-            <div class="col-md">
-                <label>{{__('Representative Person')}}<span style="color: red;">*</span></label>
-                <select name="representative_id" class="form-control">
-                    <option value="here_id_foreach">employee-id - employee name</option>
-                </select>
-            </div>
         </div>
         <div class="form-row mb-4">
             <div class="col-md">

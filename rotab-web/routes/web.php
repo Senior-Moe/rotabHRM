@@ -26,3 +26,7 @@ Route::get('Branch', function(){
 Route::get('Department', function(){
     return view('add_new_department');
 });
+
+Route::get('create_position', function(){
+    return view('create_positions');
+});

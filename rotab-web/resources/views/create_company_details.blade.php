@@ -51,62 +51,74 @@
         <h4>{{__('Manager on CR')}}</h4>
         <div class="form-row mb-4">
             <div class="col-md">
-                <label>{{__('First Manager in CR')}}</label>
-                <input type="text" class="form-control" name="first_manager_in_cr">
+                <label>{{__('First Manager in CR')}}<span style="color: red;">*</span></label>
+                <input type="text" class="form-control mb-2" name="first_manager_in_cr" placeholder="عربي" required>
+                <input type="text" class="form-control" name="first_manager_in_cr_en" placeholder="English" required>
             </div>
             <div class="col-md">
                 <label>{{__('Second Manager in CR')}}</label>
-                <input type="text" class="form-control" name="second_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="second_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="second_manager_in_cr" placeholder="English">
             </div>
         </div>
         <div class="form-row mb-4">
             <div class="col-md">
                 <label>{{__('Third Manager in CR')}}</label>
-                <input type="text" class="form-control" name="third_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="third_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="third_manager_in_cr" placeholder="English">
             </div>
             <div class="col-md">
                 <label>{{__('Fourth Manager in CR')}}</label>
-                <input type="text" class="form-control" name="fourth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="fourth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="fourth_manager_in_cr" placeholder="English">
             </div>
         </div>
         <div class="form-row mb-4">
             <div class="col-md">
                 <label>{{__('Fifth Manager in CR')}}</label>
-                <input type="text" class="form-control" name="fifth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="fifth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="fifth_manager_in_cr" placeholder="English">
             </div>
             <div class="col-md">
                 <label>{{__('Sixth Manager in CR')}}</label>
-                <input type="text" class="form-control" name="sixth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="sixth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="sixth_manager_in_cr" placeholder="English">
             </div>
         </div>
         <div class="form-row mb-4">
             <div class="col-md">
                 <label>{{__('Seventh Manager in CR')}}</label>
-                <input type="text" class="form-control" name="seventh_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="seventh_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="seventh_manager_in_cr" placeholder="English">
             </div>
             <div class="col-md">
                 <label>{{__('Eighth Manager in CR')}}</label>
-                <input type="text" class="form-control" name="eighth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="eighth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="eighth_manager_in_cr" placeholder="English">
             </div>
         </div>
         <div class="form-row mb-4">
             <div class="col-md">
                 <label>{{__('Ninth Manager in CR')}}</label>
-                <input type="text" class="form-control" name="ninth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="ninth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="ninth_manager_in_cr" placeholder="English">
             </div>
             <div class="col-md">
                 <label>{{__('TenthManager in CR')}}</label>
-                <input type="text" class="form-control" name="tenth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="tenth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="tenth_manager_in_cr" placeholder="English">
             </div>
         </div>
         <div class="form-row mb-4">
             <div class="col-md">
                 <label>{{__('Eleventh Manager in CR')}}</label>
-                <input type="text" class="form-control" name="eleventh_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="eleventh_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="eleventh_manager_in_cr" placeholder="English">
             </div>
             <div class="col-md">
                 <label>{{__('Twelfth Manager in CR')}}</label>
-                <input type="text" class="form-control" name="twelfth_manager_in_cr">
+                <input type="text" class="form-control mb-2" name="twelfth_manager_in_cr" placeholder="عربي">
+                <input type="text" class="form-control" name="twelfth_manager_in_cr" placeholder="English">
             </div>
         </div>
         <hr>
