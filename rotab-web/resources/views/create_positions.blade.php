@@ -8,7 +8,11 @@
             <div class="form-row mb-4">
                 <div class="col-md">
                     <label>{{__('Position Name')}}<span style="color: red;">*</span></label>
-                    <input type="text" class="form-control" name="position_name"  required>
+                    <input type="text" class="form-control" name="position_name" placeholder="عربي" required>
+                </div>
+                <div class="col-md">
+                    <label>{{__('Position Name in English')}}<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="position_name_en" placeholder="English" required>
                 </div>
                 <div class="col-md">
                     <label>{{__('Position in Department')}}</label>

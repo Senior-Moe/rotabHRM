@@ -16,9 +16,7 @@ Route::get('adding_employee_contact_details',[add_employee_contact_details_contr
 Route::get('company', function(){
     return view('create_company_details');
 });
-Route::get('department', function(){
-    return view('create_department_details');
-});
+
 Route::get('Branch', function(){
     return view('create_new_branch');
 });
@@ -30,3 +28,11 @@ Route::get('Department', function(){
 Route::get('create_position', function(){
     return view('create_positions');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
