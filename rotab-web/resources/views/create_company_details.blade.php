@@ -1,5 +1,6 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+@extends('layouts.app')
 
+@section('content')
 <div class="container mt-5">
     <form action="" method="post">
         {{csrf_field()}}
@@ -164,3 +165,4 @@
             <button name="submit" type="submit" class="btn btn-primary">submit</button>
     </form>
 </div>
+@endsection
