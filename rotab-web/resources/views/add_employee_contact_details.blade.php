@@ -1,8 +1,13 @@
- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+@extends('layouts.app')
+
+@section('title', "{{__('Add Contact Information')}}")
+
+@section('content')
 <div class="container mt-5">
+
         <form action="" method="post">
 {{csrf_field()}}
-            <h3>Update Passprot Information.</h3>
+            <h3>Contact Information.</h3>
             <div class="form-row mb-4">
                 <div class="col-md">
                     <label>Employee Job ID or ID</label>
@@ -72,3 +77,4 @@
             </div>
             <button name="submit" type="submit" class="btn btn-primary">Submit</button>
         </form>
+@endsection

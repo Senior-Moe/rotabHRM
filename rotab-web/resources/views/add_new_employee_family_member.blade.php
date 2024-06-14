@@ -1,4 +1,8 @@
+@extends('layouts.app')
 
+@section('title', "{{__('Employees family Member')}}")
+
+@section('content')
 <div class="container mt-5">
 
     <form action="" method="post">
@@ -71,3 +75,5 @@
             <button name="submit" type="submit" class="btn btn-primary">submit</button>
     </form>
 </div>
+
+@endsection

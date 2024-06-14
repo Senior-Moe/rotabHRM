@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', "{{__('Create Company')}}")
+
 @section('content')
 <div class="container mt-5">
     <form action="" method="post">
