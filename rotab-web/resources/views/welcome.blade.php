@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" type="image/x-icon" href="/images/icon.png" />
 
-        <title>Rotab HRM | </title>
+        <title>Rotab HRM</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -204,12 +205,12 @@
           </div>
         </div>
         <div class="col-md-4 footer-col">
-            <h5>hello World</h5>
+            <h5>Donation</h5>
         </div>
       </div>
       <div class="footer-info">
         <p>&copy; <span id="displayYear"></span>All Rights Reserved By
-        <a href="#">GPLv3</a></p>
+        <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></p>
       </div>
     </div>
   </footer>
