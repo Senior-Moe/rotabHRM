@@ -58,7 +58,7 @@ return new class extends Migration
              *employee_allowance
              *employee_other_allowance
              *employee_gender
-             */
+             
             $table->id();
             $table->timestamps();
             $table->string('employee_status')->defult('active');
@@ -102,6 +102,7 @@ return new class extends Migration
             $table->decimal('employee_allowance', 8, 2);
             $table->decimal('employee_other_allowance', 8, 2);
             $table->string('employee_gender');
+	     */
 });
     }
 

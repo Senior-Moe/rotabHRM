@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\add_employee_controller;
-use App\Http\Controllers\add_employee_passport_controller;
-use App\Http\Controllers\add_employee_contact_details_controller;
+//use App\Http\Controllers\add_employee_controller;
+//use App\Http\Controllers\add_employee_passport_controller;
+//use App\Http\Controllers\add_employee_contact_details_controller;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*
 Route::get('/home/adding_new_employee' , [add_employee_controller::class , 'new_employee']);
 Route::middleware(['auth'])->group(function(){
     Route::get('/home/adding_new_employee_passport' , [add_employee_passport_controller::class , 'new_adding_passport']);
@@ -32,6 +32,11 @@ Route::get('/home/Department', function(){
 Route::get('/home/create_position', function(){
     return view('create_positions');
 })->middleware('auth');
+
+ *
+ */
+
+Route::get('/home/adding_new_company', [App\Http\Controllers\companies_forms::class , 'new_company_form']);
 
 Auth::routes();
 

@@ -1,0 +1,157 @@
+#+title: Database in Rotab HRM
+#+Author: Mohammed Alnahdi
+#+Date: <2024-08-24 Sat>
+#+Email: m.kh.alnahdi@gmail.com
+
+
+* Introduction:
+
+
+* Employee:
+
+| column name                     | type    | Description                                                                                               |
+|---------------------------------+---------+-----------------------------------------------------------------------------------------------------------|
+| id                              | int     | Auto increment for registration table                                                                     |
+| create_at                       | date    | Auto submit                                                                                               |
+| modifiy_at                      | date    | Auto submit                                                                                               |
+| employee_status                 | varchar | status employee if still in current position or not                                                       |
+| public_employee_job_id          | int     | The number of Employee in the organization                                                                |
+| employee_first_name             | varchar | First name of employee by English                                                                         |
+| employee_father_name            | varchar | Father name of employee by English                                                                        |
+| employee_grandfather_name       | varchar | Grandfather name of employee by English                                                                   |
+| employee_last_name              | varchar | Family name of employee by English                                                                        |
+| employee_first_name_ar          | varchar | First name of employee by Arabic                                                                          |
+| employee_father_name_ar         | varchar | Father name of employee by Arabic                                                                         |
+| employee_grandfather_name_ar    | varchar | Grandfather name of employee by Arabic                                                                    |
+| employee_last_name_ar           | varchar | Family name of employee by Arabic                                                                         |
+| employee_occupation             | varchar | Job title as ID or Iqama.(that record it in Iqama or Civil Affairs)                                       |
+| employee_occupation_ar          | varchar | Job title as ID or Iqama. By Arabic (that record it in Iqama or Civil Affairs)                            |
+| employee_nationality            | varchar | nationality of employee.                                                                                  |
+| employee_nationality_ar         | varchar | nationality of employee. by Arabic (Auto)                                                                 |
+| employee_expire_card            | date    | Iqama or ID expiration.                                                                                   |
+| employee_id_issue               | varchar | Iqama or ID place of issue.                                                                               |
+| employee_id_issue_ar            | varchar | Iqama or ID place of issue.                                                                               |
+| employee_religion               | varchar | religion of employee.                                                                                     |
+| employee_sponsorship            | varchar | sponsorship of ID in Taqat (Saudiation) and name of sponsorship in Iqama.                                 |
+| employee_relationship_status    | varchar | married or single.                                                                                        |
+| employee_contact_number         | int     | phone number for contacting employee.                                                                     |
+| employee_contact_email          | email   | email address for contacting employee.                                                                    |
+| employee_personal_email         | email   | email address personal                                                                                    |
+| employee_passport_number        | int     | employee passport number. - accepting NULL because Saudi no need for provide passport in some industries. |
+| employee_occupation_in_passport | varchar | employee passport occupation - accepting NULL because there is passport has not occupation section.       |
+| employee_passport_expiry        | date    | date expiry of passport accepting NULL.                                                                   |
+| employee_id_number_card         | int     | Identity number in Iqama or ID.                                                                           |
+| employee_insurance_name         | varchar | name of company health policy.                                                                            |
+| employee_insurance_class        | varchar | class of health insurance policy.                                                                         |
+| employee_gender                 | enum    | enum male or female.                                                                                      |
+
+
+* Employee Certificate:
+
+| colum name               | type    | Description                           |
+|--------------------------+---------+---------------------------------------|
+| id                       | int     | Auto increment for registration table |
+| create_at                | date    | Auto submit                           |
+| modifiy_at               | date    | Auto submit                           |
+| employee_id              | linked  | Employee table (public)               |
+| employee_college_name    | varchar | college name by English.              |
+| employee_college_name_ar | varchar | college name by Arabic                |
+| employee_degree          | varchar | certificate for the employee.         |
+| employee_degree_grade    | int     | grade of certificate.                 |
+
+
+* Employee Addresses:
+
+| column name                  | type    | Description                                         |
+|------------------------------+---------+-----------------------------------------------------|
+| id                           | int     | Auto increment for registration table               |
+| create_at                    | date    | Auto submit                                         |
+| modifiy_at                   | date    | Auto submit                                         |
+| employee_id                  | linked  | Employee table (public)                             |
+| employee_na_short_address    | varchar | Details of National proof Address the short address |
+| employee_na_building_number  | int     | building number in national address.                |
+| employee_na_street_name      | varchar | name of street in national address.                 |
+| employee_na_street_name_ar   | varchar | name of street in national address By Arabic.       |
+| employee_na_secondary_number | int     | secondery number in national address.               |
+| employee_na_postal_code      | int     | postal code in national address.                    |
+| employee_na_city             | varchar | city name in national address.                      |
+| employee_na_district         | varchar | District in national address.                       |
+| employee_na_district_ar      | varchar | District in national address.                       |
+
+* Employee Salary
+
+| column name                       | type   | Description                                         |
+|-----------------------------------+--------+-----------------------------------------------------|
+| id                                | int    | Auto increment for registration table               |
+| create_at                         | date   | Auto submit                                         |
+| modifiy_at                        | date   | Auto submit                                         |
+| employee_id                       | linked | Employee table.  (public)                           |
+| employee_basic_salary             | float  | employee basic salary.                              |
+| employee_transportation_allowance | float  | employee transportation allowance salary. default 0 |
+| employee_housing_allowance        | float  | employee housing allowance salary. default 0        |
+| employee_other_allowance          | float  | employee other allowance salary. default 0          |
+
+* Company
+| column                                                      | type    | Description                              |
+|-------------------------------------------------------------+---------+------------------------------------------|
+| id                                                          | int     | Auto increment for registration.         |
+| create_at                                                   | date    | Auto submit                              |
+| modifiy_at                                                  | date    | Auto submit                              |
+| company_details_name                                        | varchar | name of company.                         |
+| company_details_name_ar                                     | varchar | name of company. By Arabic.              |
+| company_type                                                | enum    | type of this company LLC, trading ..etc  |
+| company_websit                                              | varchar | website as CR.                           |
+| company_details_Auth                                        | varchar | Auth as CR.                              |
+| company_details_head_office_address                         | varchar | HO address as CR.                        |
+| company_details_head_office_address_ar                      | varchar | HO address as CR. By Arabic              |
+| company_details_city                                        | varchar | HO city location                         |
+| company_details_city_ar                                     | varchar | HO city location. By arabic              |
+| company_details_commercial_registration                     | int     | CR Number for company.                   |
+| company_details_unified_number                              | int     | unified number for company.              |
+| company_details_owner                                       | varchar | name of owner                            |
+| company_details_owner_ar                                    | varchar | name of owner by Arabic                  |
+| company_details_expiration_commercial_registration          | date    | CR expiry.                               |
+| company_details_first_manager_commercial_registration       | varchar | First Manager in CR.                     |
+| company_details_second_manager_commercial_registration      | varchar | Second Manager in CR. - Accepting NULL   |
+| company_details_third_manager_commercial_registration       | varchar | Third Manager in CR  - Accepting NULL    |
+| company_details_fourth_manager_commercial_registration      | varchar | fourth Manager in CR - Accepting NULL    |
+| company_details_fifth_manager_commercial_registration       | varchar | fifth Manager in CR - Accepting NULL     |
+| company_details_sixth_manager_commercial_registration       | varchar | sixth Manager in CR - Accepting NULL     |
+| company_details_seventh_manager_commercial_registration     | varchar | seventh Manager in CR - Accepting NULL.  |
+| company_details_eighth_manager_commercial_registration      | varchar | eighth Manager in CR - Accepting NULL.   |
+| company_details_ninth_manager_commercial_registration       | varchar | ninth Manager in CR - Accepting NULL.    |
+| company_details_tenth_manager_commercial_registration       | varchar | tenth Manager in CR - Accepting NULL.    |
+| company_details_eleventh_manager_commercial_registration    | varchar | eleventh Manager in CR - Accepting NULL. |
+| company_details_twelfth_manager_commercial_registration     | varchar | twelfth Manager in CR - Accepting NULL.  |
+| company_details_first_manager_commercial_registration_ar    | varchar | First Manager in CR.                     |
+| company_details_second_manager_commercial_registration_ar   | varchar | Second Manager in CR. - Accepting NULL   |
+| company_details_third_manager_commercial_registration_ar    | varchar | Third Manager in CR  - Accepting NULL    |
+| company_details_fourth_manager_commercial_registration_ar   | varchar | fourth Manager in CR - Accepting NULL    |
+| company_details_fifth_manager_commercial_registration_ar    | varchar | fifth Manager in CR - Accepting NULL     |
+| company_details_sixth_manager_commercial_registration_ar    | varchar | sixth Manager in CR - Accepting NULL     |
+| company_details_seventh_manager_commercial_registration_ar  | varchar | seventh Manager in CR - Accepting NULL.  |
+| company_details_eighth_manager_commercial_registration_ar   | varchar | eighth Manager in CR - Accepting NULL.   |
+| company_details_ninth_manager_commercial_registration_ar    | varchar | ninth Manager in CR - Accepting NULL.    |
+| company_details_tenth_manager_commercial_registration_ar    | varchar | tenth Manager in CR - Accepting NULL.    |
+| company_details_eleventh_manager_commercial_registration_ar | varchar | eleventh Manager in CR - Accepting NULL. |
+| company_details_twelfth_manager_commercial_registration_ar  | varchar | twelfth Manager in CR - Accepting NULL.  |
+| company_details_company_phone_number                        | int     | phone number in CR.                      |
+| company_details_vat_number                                  | int     | VAT number of company as CR.             |
+| company_details_nationality                                 | enum    | Saudi or Forign                          |
+
+
+* Company Addresses:
+
+| column name                         | type    | description.                                        |
+|-------------------------------------+---------+-----------------------------------------------------|
+| id                                  | int     | Auto increment for registration.                    |
+| create_at                           | date    | Auto submit                                         |
+| modifiy_at                          | date    | Auto submit                                         |
+| company_details_na_short_address    | varchar | Details of National proof Address the short address |
+| company_details_na_building_number  | int     | building number in national address.                |
+| company_details_na_street_name      | varchar | name of street in national address.                 |
+| company_details_na_street_name_ar   | varchar | name of street in national address.                 |
+| company_details_na_secondary_number | int     | secondery number in national address.               |
+| company_details_na_postal_code      | int     | postal code in national address.                    |
+| employee_na_district                | varchar | District in national address.                       |
+| employee_na_district_ar             | varchar | District in national address.                       |
