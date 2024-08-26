@@ -15,6 +15,7 @@
         </ul>
     </div>
 @endif
+
     <form action="" method="post">
 
         {{csrf_field()}}

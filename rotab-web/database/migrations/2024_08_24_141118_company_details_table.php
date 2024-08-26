@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('company_main_details', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned();
             $table->timestamps();
             $table->string('company_details_name');
             $table->string('company_details_name_ar');
@@ -23,8 +23,8 @@ return new class extends Migration
             $table->string('company_details_head_office_address_ar');
             $table->string('company_details_city');
             $table->string('company_details_city_ar');
-            $table->integer('company_details_commercial_registration');
-            $table->integer('company_details_unified_number');
+            $table->bigInteger('company_details_commercial_registration');
+            $table->bigInteger('company_details_unified_number');
             $table->string('company_details_owner');
             $table->string('company_details_owner_ar');
             $table->date('company_details_expiration_commercial_registration');
@@ -52,8 +52,8 @@ return new class extends Migration
             $table->string('company_details_tenth_manager_commercial_registration_ar')->nullable();
             $table->string('company_details_eleventh_manager_commercial_registration_ar')->nullable();
             $table->string('company_details_twelfth_manager_commercial_registration_ar')->nullable();
-            $table->integer('company_details_company_phone_number');
-            $table->integer('company_details_vat_number');
+            $table->bigInteger('company_details_company_phone_number');
+            $table->bigInteger('company_details_vat_number');
             $table->string('company_details_nationality');
             $table->string('company_details_nationality_ar');
         });

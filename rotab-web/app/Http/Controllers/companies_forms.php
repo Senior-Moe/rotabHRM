@@ -24,9 +24,9 @@ public function __construct(){
           'company_name'=>'required|string|max:80',
           'company_website'=>'required|string|max:80',
           'company_auth_url'=>'required|string|max:80',
-          'company_commercial_registration_no'=>'required|numeric',
-          'unified_no'=>'required|numeric',
-          'vat_no'=>'required|numeric',
+          'company_commercial_registration_no'=>'required|integer',
+          'unified_no'=>'required|integer',
+          'vat_no'=>'required|integer',
           'expiry_date_cr'=>'required|date',
           'headoffice_address_in_cr'=>'required|string|max:50',
           'headoffice_address_in_cr_ar'=>'required|string|max:50',
@@ -65,7 +65,7 @@ public function __construct(){
           'twelfth_manager_in_cr_ar'=>'nullable|string|max:100',
           'company_city'=>'required|string|max:100',
           'company_city_ar'=>'required|string|max:100',
-          'company_phone_number'=>'required|numeric',
+          'company_phone_number'=>'required|integer',
           'company_type'=>'required|string|max:100',
           'nationality_cr'=>'required|string|max:100',
         ]);
@@ -129,5 +129,11 @@ public function __construct(){
         
     }
 
+    public function add_company_national_address(){
+
+            $company_names = Company_Details::all();
+
+            return view('adding_national_address_company',compact('company_names'));
+    }
 
 }
