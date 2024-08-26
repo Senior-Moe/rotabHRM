@@ -37,6 +37,7 @@ Route::get('/home/create_position', function(){
  */
 
 Route::get('/home/adding_new_company', [App\Http\Controllers\companies_forms::class , 'new_company_form']);
+Route::post('/home/adding_new_company' , [App\Http\Controllers\companies_forms::class , 'submit_new_company']);
 
 Auth::routes();
 

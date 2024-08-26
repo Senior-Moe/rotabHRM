@@ -138,6 +138,7 @@
 | company_details_company_phone_number                        | int     | phone number in CR.                      |
 | company_details_vat_number                                  | int     | VAT number of company as CR.             |
 | company_details_nationality                                 | enum    | Saudi or Forign                          |
+| company_details_nationality_ar                              | enum    | Saudi or Forign  by arabic               |
 
 
 * Company Addresses:
