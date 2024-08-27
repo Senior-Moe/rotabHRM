@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company_Details;
-
+use App\Models\Company_Addresses;
 
 class companies_forms extends Controller
 {
@@ -124,7 +124,7 @@ public function __construct(){
         $submit_company_in_database->save();
        
 
-        return redirect()->back()->with('sucess','the data has been added!');
+        return redirect()->back()->with('success','the data has been added!');
 
         
     }
@@ -136,4 +136,41 @@ public function __construct(){
             return view('adding_national_address_company',compact('company_names'));
     }
 
+        public function submit_company_national_address(Request $request){
+
+
+                $validation = $request->validate([
+                'company_id' => 'required|integer',
+                'account_number' => 'required|integer',
+                'entry_date' => 'required|date',
+                'expiry_date' => 'required|date',
+                'short_address' =>'required|string',
+                'building_no' =>'required|string',
+                'street_name_ar'=>'required|string',
+                'street_name' => 'required|string',
+                'secondary_no' => 'required|string',
+                'district_name_ar' => 'required|string',
+                'district_name' => 'required|string',
+                'postal_code' => 'required|string',
+                ]);
+
+       
+        $submit_national_address = new Company_Addresses();
+        $submit_national_address->company_main_details_id = $validation['company_id'];
+        $submit_national_address->company_details_na_account_no = $validation['account_number'];
+        $submit_national_address->company_details_na_expiry_date = $validation['expiry_date'];
+        $submit_national_address->company_details_na_entry_date = $validation['entry_date'];
+        $submit_national_address->company_details_na_short_address = $validation['short_address'];
+        $submit_national_address->company_details_na_building_number = $validation['building_no'];
+        $submit_national_address->company_details_na_street_name = $validation['street_name'];
+        $submit_national_address->company_details_na_street_name_ar= $validation['street_name_ar'];
+        $submit_national_address->company_details_na_secondary_number= $validation['secondary_no'];
+        $submit_national_address->company_details_na_district= $validation['district_name'];
+        $submit_national_address->company_details_na_district_ar= $validation['district_name_ar'];
+        $submit_national_address->company_details_na_postal_code= $validation['postal_code'];
+        $submit_national_address->save();
+
+        return redirect()->back()->with('success','the data has been added!');
+
+        }
 }

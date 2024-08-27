@@ -91,7 +91,7 @@
 | employee_housing_allowance        | float  | employee housing allowance salary. default 0        |
 | employee_other_allowance          | float  | employee other allowance salary. default 0          |
 
-* Company
+* Company: Done : company_main_details
 | column                                                      | type    | Description                              |
 |-------------------------------------------------------------+---------+------------------------------------------|
 | id                                                          | int     | Auto increment for registration.         |
@@ -141,7 +141,7 @@
 | company_details_nationality_ar                              | enum    | Saudi or Forign  by arabic               |
 
 
-* Company Addresses:
+* Company Addresses: Done : company_main_details_id
 
 | column name                         | type    | description.                                        |
 |-------------------------------------+---------+-----------------------------------------------------|
