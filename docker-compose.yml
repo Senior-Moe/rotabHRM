@@ -24,7 +24,7 @@ services:
             MYSQL_DATABASE: ROTAB
             MYSQL_USER: root
         ports:
-            - 3306:3306
+            - 9002:3306
         volumes:
             - db_data:/var/lib/mysql
         networks:
