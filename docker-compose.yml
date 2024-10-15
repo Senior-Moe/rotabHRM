@@ -1,4 +1,4 @@
-version: '3.8'
+version: '2.29'
 services:
     web_server:
         image: nginx:latest
@@ -35,6 +35,19 @@ services:
             - 9001:80
         environment:
             - PMA_ARBITRARY=1
+    npm:
+      image: node:bookworm
+      container_name: rotab_npm
+      volumes:
+        - ./src:/var/www/html
+      working_dir: /var/www/html  # Set the working directory inside the container
+      command: bash -c "npm install && npm run dev"  # Install dependencies and run the dev server
+      depends_on:
+        - rotab_db
+      ports:
+        - "3000:3000"  # Assuming your app runs on port 3000, change if necessary
+      networks:
+        - rotab-network
 volumes:
   db_data:
 

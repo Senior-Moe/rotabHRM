@@ -34,5 +34,5 @@ config-cache:
   docker exec rotab_php bash -c "php artisan config:cache"
 
 permission:
-  docker exec rotab_php bash -c "chmod 777 bootstrap/ -R "
-  docker exec rotab_php bash -c "chmod 777 storage/ -R "
+	docker exec rotab_php bash -c "chmod 777 bootstrap/ -R"
+	docker exec rotab_php bash -c "chmod 777 storage/ -R"
